@@ -1,18 +1,11 @@
-import argparse
-import sys
+from pprint import pprint
 
-parser = argparse.ArgumentParser()
-parser.add_argument("--first-guess", action="store_true", help="Első tipp")
-parser.add_argument("--present")
-parser.add_argument("--correct-regex")
+from submodules.argparser import ARGS
+from submodules.guess_recommendation import GuessRecommendation
+
 # TODO minden fájlra külön logika kell -> usable_words.txt nem használható
 #   - átgondolni, hogy lehet-e egységesíteni
 #       - maybe dzs dz sorrend? <- usable_words.txt most ilyen, jó így? - így marad, ha nem jó, módosul
+recommendation = GuessRecommendation(ARGS.first_guess, ARGS.present, ARGS.not_present, ARGS.correct_regex)
 
-args = parser.parse_args()
-
-if args.first_guess:
-    print("alant")
-    sys.exit(0)
-
-NON_SINGLE_MSGHK = "cs dzs dz gy ly ny sz ty zs".split()
+pprint(recommendation.get_recommendations())
