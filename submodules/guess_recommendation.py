@@ -19,8 +19,6 @@ class GuessRecommendation:
         self.__convert_input()
         self.__compile_present_letters()
 
-        print(self._not_present)
-
     def __convert_input(self):
         for i in range(len(self._present)):
             for key, value in NON_SINGLE_MSGHK_MAP.items():
@@ -72,14 +70,11 @@ class GuessRecommendation:
 
     def __get_list_of_usable_words(self, wordlist: Optional[List[str]]):
         if wordlist:
-            # print(wordlist)
             return self.__filter_wordlist(wordlist)
         else:
             return self.__filter_file()
 
     def __filter_wordlist(self, wordlist: List[str]):
-        print(self._letter_list)
-        print(self._not_present)
         return [word for word in wordlist
                 if self.__contains_all(word, self._letter_list) and self.__contains_none(word, self._not_present)]
 
