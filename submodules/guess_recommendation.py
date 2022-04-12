@@ -35,10 +35,17 @@ class GuessRecommendation:
             self._letter_list.add(item)
         for item in self._correct_regex:
             if item != ".":
-                self._letter_list.add(item)
+                if self.__is_all_alnum(item):
+                    self._letter_list.add(item)
 
         for item in self._not_present:
             self._letter_list.discard(item)
+
+    def __is_all_alnum(self, word):
+        for char in word:
+            if not char.isalnum():
+                return False
+        return True
 
     def get_recommendations(self):
         values = self.__get_recommendations()
