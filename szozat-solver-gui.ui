@@ -35,7 +35,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="txt_present"/>
+      <widget class="QLineEdit" name="txt_present">
+       <property name="text">
+        <string>.</string>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QPushButton" name="btn_present">
@@ -115,19 +119,39 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QLineEdit" name="txt_regex1"/>
+        <widget class="QLineEdit" name="txt_regex1">
+         <property name="text">
+          <string>.</string>
+         </property>
+        </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="txt_regex2"/>
+        <widget class="QLineEdit" name="txt_regex2">
+         <property name="text">
+          <string>.</string>
+         </property>
+        </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="txt_regex3"/>
+        <widget class="QLineEdit" name="txt_regex3">
+         <property name="text">
+          <string>.</string>
+         </property>
+        </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="txt_regex4"/>
+        <widget class="QLineEdit" name="txt_regex4">
+         <property name="text">
+          <string>.</string>
+         </property>
+        </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="txt_regex5"/>
+        <widget class="QLineEdit" name="txt_regex5">
+         <property name="text">
+          <string>.</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
