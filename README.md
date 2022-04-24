@@ -70,4 +70,4 @@ törölni nem lehet. A CLI-s használatban leírtak érvényesek itt is.
 ## Használat (Releases)
 Ez a GUI-t használja. Használatához szükség van a solver_gui.exe és usable_words.txt fájlokra. Ezeknek ugyanabban a
 mappában kell lenniük. Azért nincs beleégetve a futtatható fájlba a usable_words.txt, hogy szólista változás esetén
-elegendő legyen csak a szólistát cserélni.
+elegendő legyen csak a szólistát frissíteni.
