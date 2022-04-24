@@ -5,3 +5,9 @@
 !requirements.txt
 
 **/__pycache__
+
+dist
+build
+dist/**
+build/**
+solver_gui.spec

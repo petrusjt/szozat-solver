@@ -12,7 +12,7 @@ Segít megfejteni a napi [szózatot](https://szozat.miklosdanka.com/).
 prepare_data.bat
 ```
 
-## Használat
+## Használat (CLI)
 *(a repo root mappájában állva)*
 ```
 py solver.py [--first-guess] [--present=<betűlista>] [--not-present=<betűlista>] [--correct-regex=<regex>]
@@ -55,3 +55,19 @@ py solver.py [--first-guess] [--present=<betűlista>] [--not-present=<betűlista
       3. a harmadik betű bármi, ami nem `gy`, `é`, `á` vagy `e`
       4. a negyedik betű tetszőleges
       5. az ötödik betű `f`
+
+## Használat (GUI)
+solver_gui.py futtatása.
+
+CLI-ből:
+```
+py solver_gui.py
+```
+
+A grafikus felületen megtalálhatóak a CLI-s felületen írt kapcsolók, csak máshogy elrendezve, illetve a listákból
+törölni nem lehet. A CLI-s használatban leírtak érvényesek itt is.
+
+## Használat (Releases)
+Ez a GUI-t használja. Használatához szükség van a solver_gui.exe és usable_words.txt fájlokra. Ezeknek ugyanabban a
+mappában kell lenniük. Azért nincs beleégetve a futtatható fájlba a usable_words.txt, hogy szólista változás esetén
+elegendő legyen csak a szólistát cserélni.
