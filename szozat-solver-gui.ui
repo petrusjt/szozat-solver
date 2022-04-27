@@ -37,7 +37,7 @@
      <item>
       <widget class="QLineEdit" name="txt_present">
        <property name="text">
-        <string>.</string>
+        <string/>
        </property>
       </widget>
      </item>

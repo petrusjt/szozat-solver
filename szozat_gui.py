@@ -28,6 +28,7 @@ class Ui_MainWindow(object):
         self.label.setObjectName("label")
         self.verticalLayout.addWidget(self.label)
         self.txt_present = QtWidgets.QLineEdit(self.verticalLayoutWidget)
+        self.txt_present.setText("")
         self.txt_present.setObjectName("txt_present")
         self.verticalLayout.addWidget(self.txt_present)
         self.btn_present = QtWidgets.QPushButton(self.verticalLayoutWidget)
@@ -109,7 +110,6 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "szozat-solver GUI"))
         self.label.setText(_translate("MainWindow", "Szereplő betűk"))
-        self.txt_present.setText(_translate("MainWindow", "."))
         self.btn_present.setText(_translate("MainWindow", "Szereplő betű hozzáadása"))
         self.label_2.setText(_translate("MainWindow", "Nem szereplő betűk"))
         self.btn_not_present.setText(_translate("MainWindow", "Nem szereplő betű hozzáadása"))
