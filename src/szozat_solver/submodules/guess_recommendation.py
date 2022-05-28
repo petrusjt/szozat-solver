@@ -8,7 +8,7 @@ NON_SINGLE_MSGHK_MAP = {asd[1]: asd[0] for asd in enumerate(NON_SINGLE_MSGHK)}
 class GuessRecommendation:
     FIRST_GUESS = "etióp"
 
-    def __init__(self, first_guess: bool, present: str, not_present: str, correct_regex: str, lang: str = "hu"):
+    def __init__(self, first_guess: bool, present: List[str], not_present: List[str], correct_regex: List[str], lang: str = "hu"):
         self._first_guess = first_guess
         self._present = present.split(",") if present else set()
         self._not_present = not_present.split(",") if not_present else set()
