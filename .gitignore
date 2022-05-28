@@ -1,9 +1,11 @@
 .idea/**
 
 **.txt
-!magyar_szavak.txt
-!usable_words_en.txt
+!src/szozat_solver/magyar_szavak.txt
+!src/szozat_solver/usable_words_en.txt
 !requirements.txt
+!src/szoat_solver_petrusjt.egg-info
+!src/szozat_solver_petrusjt.egg-info/*
 
 **/__pycache__
 
