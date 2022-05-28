@@ -1,0 +1,1 @@
+import szozat_solver

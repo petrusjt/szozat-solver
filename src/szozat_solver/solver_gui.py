@@ -3,7 +3,7 @@ from typing import List
 
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
-from submodules.guess_recommendation import GuessRecommendation
+from src.szozat_solver.submodules.guess_recommendation import GuessRecommendation
 from szozat_gui import Ui_MainWindow
 
 
