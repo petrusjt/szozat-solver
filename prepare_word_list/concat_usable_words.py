@@ -1,6 +1,6 @@
 
 
-with open("usable_words.txt", "w") as fout:
+with open("usable_words_hu.txt", "w") as fout:
     with open("egyszeru_szavak.txt") as file:
         for line in file:
             print(line.strip(), file=fout)

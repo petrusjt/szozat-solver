@@ -2,7 +2,7 @@
 
 **.txt
 !magyar_szavak.txt
-!english_words.txt
+!usable_words_en.txt
 !requirements.txt
 
 **/__pycache__

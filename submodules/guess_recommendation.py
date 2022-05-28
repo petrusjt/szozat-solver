@@ -6,13 +6,14 @@ NON_SINGLE_MSGHK_MAP = {asd[1]: asd[0] for asd in enumerate(NON_SINGLE_MSGHK)}
 
 
 class GuessRecommendation:
-    FIRST_GUESS = "alant"
+    FIRST_GUESS = "etióp"
 
-    def __init__(self, first_guess: bool, present: str, not_present: str, correct_regex: str):
+    def __init__(self, first_guess: bool, present: str, not_present: str, correct_regex: str, lang: str = "hu"):
         self._first_guess = first_guess
         self._present = present.split(",") if present else set()
         self._not_present = not_present.split(",") if not_present else set()
         self._correct_regex = correct_regex.split(",") if correct_regex else set()
+        self._wordlist_name = f"usable_words_{lang}.txt"
 
         self._letter_list = set()
 
@@ -72,7 +73,7 @@ class GuessRecommendation:
 
     def __get_regex_matches_from_file(self):
         regex = re.compile("".join(self._correct_regex))
-        with open("usable_words.txt") as file:
+        with open(self._wordlist_name) as file:
             return [line.strip() for line in file if regex.match(line.strip())]
 
     def __get_list_of_usable_words(self, wordlist: Optional[List[str]]):
@@ -86,7 +87,7 @@ class GuessRecommendation:
                 if self.__contains_all(word, self._letter_list) and self.__contains_none(word, self._not_present)]
 
     def __filter_file(self):
-        with open("usable_words.txt") as file:
+        with open(self._wordlist_name) as file:
             return [line.strip() for line in file
                     if self.__contains_all(line.strip(), self._letter_list)
                     and self.__contains_none(line.strip(), self._not_present)]
