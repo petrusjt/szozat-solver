@@ -1,1 +1,1 @@
-import szozat_solver
+import src.szozat_solver

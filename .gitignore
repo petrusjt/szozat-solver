@@ -2,7 +2,7 @@
 
 **.txt
 !src/szozat_solver/magyar_szavak.txt
-!src/szozat_solver/usable_words_en.txt
+!usable_words_en.txt
 !requirements.txt
 !src/szoat_solver_petrusjt.egg-info
 !src/szozat_solver_petrusjt.egg-info/*
@@ -14,3 +14,7 @@ build
 dist/**
 build/**
 solver_gui.spec
+venv
+venv/*
+venv-szozat-solver
+venv-szozat-solver/*
