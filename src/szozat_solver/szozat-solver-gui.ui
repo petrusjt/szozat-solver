@@ -193,22 +193,30 @@
      <string>Használható szavak listája</string>
     </property>
    </widget>
+   <widget class="QLineEdit" name="txt_lang">
+    <property name="geometry">
+     <rect>
+      <x>1280</x>
+      <y>30</y>
+      <width>113</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>hu</string>
+    </property>
+   </widget>
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>1120</x>
-      <y>20</y>
-      <width>261</width>
-      <height>41</height>
+      <x>1200</x>
+      <y>30</y>
+      <width>71</width>
+      <height>21</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
     <property name="text">
-     <string>Első szó: ALANT</string>
+     <string>Lang/type</string>
     </property>
    </widget>
   </widget>

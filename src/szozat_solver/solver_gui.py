@@ -4,7 +4,7 @@ from typing import List
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
 from src.szozat_solver.submodules.guess_recommendation import GuessRecommendation
-from szozat_gui import Ui_MainWindow
+from src.szozat_solver.szozat_gui import Ui_MainWindow
 
 
 class Controller:
@@ -16,6 +16,7 @@ class Controller:
         self.ui.btn_present.clicked.connect(self.btn_present_clicked)
         self.ui.btn_not_present.clicked.connect(self.btn_not_present_clicked)
         self.ui.btn_search.clicked.connect(self.search_clicked)
+        self.ui.txt_lang.textChanged.connect(self.set_lang)
 
         self.main_window.show()
 
@@ -23,20 +24,30 @@ class Controller:
         self.not_present_letters: List[str] = []
         self.regex: List[str] = []
 
+        self.lang = "hu"
+
     def btn_present_clicked(self):
         present = self.ui.txt_present.text().strip()
 
         if len(present) > 0:
-            self.present_letters.append(present)
-            self.ui.lst_present.addItem(present)
+            if ',' in present:
+                self.present_letters += present.split(",")
+                self.ui.lst_present.addItems(present.split(","))
+            else:
+                self.present_letters.append(present)
+                self.ui.lst_present.addItem(present)
             self.ui.txt_present.clear()
 
     def btn_not_present_clicked(self):
         not_present = self.ui.txt_not_present.text().strip()
 
         if len(not_present) > 0:
-            self.not_present_letters.append(not_present)
-            self.ui.lst_not_present.addItem(not_present)
+            if ',' in not_present:
+                self.not_present_letters += not_present.split(",")
+                self.ui.lst_not_present.addItems(not_present.split(","))
+            else:
+                self.not_present_letters.append(not_present)
+                self.ui.lst_not_present.addItem(not_present)
             self.ui.txt_not_present.clear()
 
     def search_clicked(self):
@@ -45,10 +56,14 @@ class Controller:
         recommendation = GuessRecommendation(False,
                                              ",".join(self.present_letters),
                                              ",".join(self.not_present_letters),
-                                             joined_regex)
+                                             joined_regex,
+                                             self.lang)
 
         self.ui.lst_usable_words.clear()
         self.ui.lst_usable_words.addItems(recommendation.get_recommendations())
+
+    def set_lang(self):
+        self.lang = self.ui.txt_lang.text()
 
 
 app = QApplication(sys.argv)
