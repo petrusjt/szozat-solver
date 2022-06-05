@@ -219,6 +219,19 @@
      <string>Lang/type</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="btn_clear">
+    <property name="geometry">
+     <rect>
+      <x>1240</x>
+      <y>80</y>
+      <width>75</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Clear ALL</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>

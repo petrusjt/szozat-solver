@@ -101,6 +101,9 @@ class Ui_MainWindow(object):
         self.label_5 = QtWidgets.QLabel(self.centralwidget)
         self.label_5.setGeometry(QtCore.QRect(1200, 30, 71, 21))
         self.label_5.setObjectName("label_5")
+        self.btn_clear = QtWidgets.QPushButton(self.centralwidget)
+        self.btn_clear.setGeometry(QtCore.QRect(1240, 80, 75, 24))
+        self.btn_clear.setObjectName("btn_clear")
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -123,3 +126,4 @@ class Ui_MainWindow(object):
         self.label_4.setText(_translate("MainWindow", "Használható szavak listája"))
         self.txt_lang.setText(_translate("MainWindow", "hu"))
         self.label_5.setText(_translate("MainWindow", "Lang/type"))
+        self.btn_clear.setText(_translate("MainWindow", "Clear ALL"))
