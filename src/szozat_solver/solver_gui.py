@@ -72,6 +72,9 @@ class Controller(QDialog):
         self.lang = self.ui.txt_lang.text()
 
     def clear_all(self):
+        self.not_present_letters.clear()
+        self.present_letters.clear()
+
         self.ui.lst_present.clear()
         self.ui.lst_not_present.clear()
         self.ui.lst_usable_words.clear()
